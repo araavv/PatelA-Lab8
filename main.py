@@ -3,7 +3,6 @@ Arav Patel
 """
 
 
-
 def encoder(password):
     if len(password) != 8 or not password.isdigit():
         return "Invalid password"
@@ -14,6 +13,7 @@ def encoder(password):
 def decoder(encoded_password):
     decoded = [(int(char) - 3) % 10 for char in encoded_password]
     return ''.join(map(str, decoded))
+
 
 
 def main():
